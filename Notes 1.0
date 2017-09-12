@@ -1,0 +1,20 @@
+//如果你想要找memory address 用printf("%p",&variable);
+
+//system("pause");在 <stdlib.h>
+
+
+
+
+#include <stdio.h>
+#include "stdafx.h"
+#include <stdlib.h>
+int main()
+{
+	int oh = 19;
+	int * pOh = &oh; //创建一个指针（用来储存memory address）
+  printf("%p", pOh); // 和printf("%p", &oh);一样
+  printf("%p", &pOh); //&可以作单目运算符 取变量的地址
+	system("pause"); 
+	return 0;
+
+}
