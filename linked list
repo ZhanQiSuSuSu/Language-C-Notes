@@ -1,0 +1,23 @@
+struct Node
+{
+  int data;
+  Node* link;
+}
+Node* A;//know the address of the Head Node 
+A = Null; //empty list now
+
+Node* temp = (Node*)malloc(sizeof(Node)) //create a memory block
+(* temp).data = 2; //dereference 也可以temp ->data = 2
+(* temp).link = Null; //temp ->link = Null; 
+A = temp;
+
+//create another one
+
+//Traversal 
+Node * temp1 = A;
+while(temp1->link;)
+{
+  temp1 = temp1 ->link;
+  print"temp1->data";
+}
+temp1 ->link = temp;
