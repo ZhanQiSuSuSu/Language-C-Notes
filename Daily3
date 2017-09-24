@@ -1,0 +1,39 @@
+//Daily3.c
+void set_flag(int* flag_holder, int flag_position)
+{
+	int i = 1 << (flag_position); // shift.
+								  // printf("%d\n",i);
+	*flag_holder = *flag_holder + i;
+}
+
+int check_flag(int flag_holder, int flag_position)
+{
+	return(flag_holder & (1 << flag_position)) != 0;
+}
+
+
+//main.c
+#include <stdio.h>
+#include <stdlib.h>
+#include "Header1.h"
+
+int main(int argc, char* argv[])
+{
+	int flag_holder = 0;
+	int i;
+	set_flag(&flag_holder, 3);
+	set_flag(&flag_holder, 4);
+	set_flag(&flag_holder, 6);
+	for (i = 31; i >= 0; i--)
+	{
+		printf("%d", check_flag(flag_holder, i));
+		if (i % 4 == 0)
+		{
+			printf(" ");
+		}
+	}
+	printf("\n");
+	system("pause");
+	return 0;
+}
+//(char*)&num的意思是取了num的地址但强制转换成char*的形式表达 就可以把num的四个字节显示出来。
